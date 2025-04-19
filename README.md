@@ -23,19 +23,10 @@ The primary objective of this project is to develop a predictive model that can 
     * Identify complex relationships between variables.
 * Further details on data preprocessing, feature selection, model training, and evaluation will be provided in subsequent sections.
 
-## Repository Structure
-
-\* \`README.md\`: This file provides an overview of the project.
-\* \`data/\`: <a href = "https://www.kaggle.com/datasets/johnsonubah/whr-data-sets"> Dataset </a> Contains the dataset used for the analysis.
-\* \`notebooks/\`: (To be added) Jupyter Notebooks containing the code for data preprocessing, model training, and evaluation.
-\* \`models/\`: (To be added) Trained decision tree models.
-\* \`documentation/\`: (To be added) Additional project-related documents, such as research papers or reports.
-
 ## Key Findings (To be added)
 
 \* Important insights and findings from the data analysis.
-\* Factors that were identified as significant predictors of cardiovascular risk.
-\* Performance metrics of the decision tree classifier (e.g., accuracy, precision, recall, F1-score).
+\* Performance metrics of the decision tree classifier are found in the file attached to this repo.
 
 ## Contributions
 
@@ -52,11 +43,11 @@ The primary objective of this project is to develop a predictive model that can 
 ## Acknowledgments (To be added)
 
 \* University of Nigeria, Nsukka, for providing access to the gym member data.
-\* Any other individuals or organizations that contributed to the project.
+\* Dr. Tapamo Hippolyte of the University of Yaounde 1, my supervisor.
 
 ## Contact
 
-\* Johnson Ubah
+\* Johnson Chukwuebuka Ubah
 \* Email: [ubahjohnson@gmail.com](mailto:ubahjohnson@gmail.com)
 \* LinkedIn: [www.linkedin.com/in/johnson-ubah](www.linkedin.com/in/johnson-ubah)
 
