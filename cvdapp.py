@@ -34,7 +34,7 @@ def predict_cvd_risk(WHR, model):
     try:
         prediction = model.predict(input_data)
         # Assuming the model predicts 0, 1, or 2 for low, medium, and high risk, respectively
-        if prediction[] == "LOW":
+        if prediction[0] == "LOW":
             return "Low Risk"
         elif prediction[0] == MODERATE:
             return "Medium Risk"
