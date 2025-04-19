@@ -1,2 +1,62 @@
 # CardioVascular-Risk-Determination
-Determination of Cardiovascular disease risk using machine learning (Decision tree Classifier)
+
+## Overview
+
+This repository contains the code and documentation for a research project focused on determining cardiovascular risk. The study utilizes a decision tree classifier to analyze real-world data collected from gym members at the University of Nigeria, Nsukka, during the early hours of the day.
+
+## Project Goal
+
+The primary objective of this project is to develop a predictive model that can effectively assess an individual's risk of developing cardiovascular disease based on their waist-to-hip ratio. By analyzing key health indicators gathered from gym members, the decision tree classifier aims to identify patterns and correlations that contribute to cardiovascular risk.
+
+## Data Source
+
+* The data used in this research were collected from gym members at the University of Nigeria, Nsukka.
+* Data collection took place in the early hours of the day when respondents had not had their breakfast.
+* The dataset comprises 350 real-world measurements of the waist and hip circumference of the participants' health and fitness.
+
+## Methodology
+
+* **Machine Learning Model:** A decision tree classifier was employed as the primary machine learning algorithm for this research.
+* **Decision Tree Classifier:** This model was chosen for its ability to:
+    * Handle both categorical and numerical data.
+    * Provide transparent and interpretable results.
+    * Identify complex relationships between variables.
+* Further details on data preprocessing, feature selection, model training, and evaluation will be provided in subsequent sections.
+
+## Repository Structure
+
+\* \`README.md\`: This file provides an overview of the project.
+\* \`data/\`: <a href = "https://www.kaggle.com/datasets/johnsonubah/whr-data-sets"> Dataset </a> Contains the dataset used for the analysis.
+\* \`notebooks/\`: (To be added) Jupyter Notebooks containing the code for data preprocessing, model training, and evaluation.
+\* \`models/\`: (To be added) Trained decision tree models.
+\* \`documentation/\`: (To be added) Additional project-related documents, such as research papers or reports.
+
+## Key Findings (To be added)
+
+\* Important insights and findings from the data analysis.
+\* Factors that were identified as significant predictors of cardiovascular risk.
+\* Performance metrics of the decision tree classifier (e.g., accuracy, precision, recall, F1-score).
+
+## Contributions
+
+\* Johnson Ubah
+
+## Future Directions (To be added)
+
+\* Potential areas for further research and improvement.
+\* Ideas for expanding the project, such as:
+    * Exploring other machine learning models.
+    * Incorporating additional data sources.
+    * Developing a user-friendly application for risk assessment.
+
+## Acknowledgments (To be added)
+
+\* University of Nigeria, Nsukka, for providing access to the gym member data.
+\* Any other individuals or organizations that contributed to the project.
+
+## Contact
+
+\* Johnson Ubah
+\* Email: [ubahjohnson@gmail.com](mailto:ubahjohnson@gmail.com)
+\* LinkedIn: [www.linkedin.com/in/johnson-ubah](www.linkedin.com/in/johnson-ubah)
+
