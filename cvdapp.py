@@ -10,17 +10,17 @@ except Exception as e:
     model = None  # Ensure model is None to prevent further errors
 
 # Function to calculate the waist-to-hip ratio
-def calculate_whr(waist_circumference, hip_circumference):
-    if hip_circumference == 0:
+def calculate_whr(WAIST, HIP):
+    if HIP == 0:
         return 0  # Avoid division by zero
-    return waist_circumference / hip_circumference
+    return WAIST / HIP
 
 # Function to predict CVD risk
-def predict_cvd_risk(whr, model):
+def predict_cvd_risk(WHR, model):
     """ Predicts cardiovascular risk based on WHR and the trained model.
 
     Args:
-        whr (float): Waist-to-hip ratio.
+        WHR (float): Waist-to-hip ratio.
         model: Trained machine learning model.
 
     Returns:
@@ -30,7 +30,7 @@ def predict_cvd_risk(whr, model):
     if model is None:
         return "Model not available. Please check the application setup."
     # Prepare the input data for the model
-    input_data = np.array([[whr]])  # Ensure the input is a 2D array
+    input_data = np.array([[WHR]])  # Ensure the input is a 2D array
     try:
         prediction = model.predict(input_data)
         # Assuming the model predicts 0, 1, or 2 for low, medium, and high risk, respectively
