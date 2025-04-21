@@ -2,9 +2,12 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# Load the trained decision tree model
-
-model = joblib.load('cvd_classifier.joblib')  
+# Try to load the model
+try:
+    model = joblib.load('cvd_classifier.joblib')
+except Exception as e:
+    model = None
+    st.error(f"Failed to load model: {e}")
 
 # Function to calculate the waist-to-hip ratio
 def calculate_whr(WAIST, HIP):
@@ -14,29 +17,32 @@ def calculate_whr(WAIST, HIP):
 
 # Function to predict CVD risk
 def predict_cvd_risk(WHR, model):
-    """ Predicts cardiovascular risk based on WHR and the trained model.
-
-    Args:
-        WHR (float): Waist-to-hip ratio.
-        model: Trained machine learning model.
-
-    Returns:
-        str: "Low Risk", "Medium Risk", or "High Risk".
-             Returns "Model not available" if the model failed to load.
-    """
+    """ Predicts cardiovascular risk based on WHR and the trained model. """
     if model is None:
         return "Model not available. Please check the application setup."
-    # Prepare the input data for the model
-    input_data = np.array([[WHR]])  # Ensure the input is a 2D array
+
+    input_data = np.array([[WHR]])  # Must be 2D
     try:
         prediction = model.predict(input_data)
-        # Assuming the model predicts 0, 1, or 2 for low, medium, and high risk, respectively
-        if prediction[0] == "LOW":
-            return "Low Risk"
-        elif prediction[0] == MODERATE:
-            return "Medium Risk"
+        result = prediction[0]
+
+        # Handle both string and integer-based model outputs
+        if isinstance(result, str):
+            if result.upper() == "LOW":
+                return "Low Risk"
+            elif result.upper() == "MODERATE":
+                return "Medium Risk"
+            else:
+                return "High Risk"
+        elif isinstance(result, (int, float)):
+            if result == 0:
+                return "Low Risk"
+            elif result == 1:
+                return "Medium Risk"
+            else:
+                return "High Risk"
         else:
-            return "High Risk"
+            return f"Unexpected model output: {result}"
     except Exception as e:
         return f"Error during prediction: {e}"
 
@@ -55,9 +61,7 @@ def main():
     # Predict CVD risk
     if st.button("Predict CVD Risk"):
         risk_level = predict_cvd_risk(WHR, model)
-        st.write(f"Predicted Cardiovascular Risk: {risk_level}")
-        if model is None:
-            st.warning("The model was not loaded correctly.  Please ensure the model file is available and the path is correct.")
+        st.success(f"Predicted Cardiovascular Risk: {risk_level}")
 
 if __name__ == "__main__":
     main()
