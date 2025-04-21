@@ -60,7 +60,7 @@ def main():
 
     # Predict CVD risk
     if st.button("Predict CVD Risk"):
-        risk_level = predict_cvd_risk(WHR, model)
+        risk_level = predict_cvd_risk(WAIST, HIP, WHR, model)
         st.success(f"Predicted Cardiovascular Risk: {risk_level}")
 
 if __name__ == "__main__":
