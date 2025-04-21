@@ -3,11 +3,8 @@ import joblib
 import numpy as np
 
 # Load the trained decision tree model
-try:
-    model = joblib.load('cvd_classifier.joblib')  # Adjust the path if necessary
-except Exception as e:
-    st.error(f"Error: Unable to load the model. Please check the path. Error details: {e}")
-    model = None  # Ensure model is None to prevent further errors
+
+model = joblib.load('cvd_classifier.joblib')  
 
 # Function to calculate the waist-to-hip ratio
 def calculate_whr(WAIST, HIP):
