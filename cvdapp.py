@@ -16,17 +16,17 @@ def calculate_whr(WAIST, HIP):
     return WAIST / HIP
 
 # Function to predict CVD risk
-def predict_cvd_risk(WHR, model):
-    """ Predicts cardiovascular risk based on WHR and the trained model. """
+def predict_cvd_risk(WAIST, HIP, WHR, model):
+    """ Predicts cardiovascular risk based on WAIST, HIP, WHR and the trained model. """
     if model is None:
         return "Model not available. Please check the application setup."
 
-    input_data = np.array([[WHR]])  # Must be 2D
+    input_data = np.array([[WAIST, HIP, WHR]])  # All three features in correct order
     try:
         prediction = model.predict(input_data)
         result = prediction[0]
 
-        # Handle both string and integer-based model outputs
+        # Handle both string and numeric model outputs
         if isinstance(result, str):
             if result.upper() == "LOW":
                 return "Low Risk"
