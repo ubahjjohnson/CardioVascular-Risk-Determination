@@ -51,8 +51,8 @@ def main():
     st.title("Cardiovascular Risk Prediction App")
 
     # User inputs
-    WAIST = st.number_input("Waist Circumference (cm)", min_value=50.0, max_value=150.0, step=1.0)
-    HIP = st.number_input("Hip Circumference (cm)", min_value=70.0, max_value=150.0, step=1.0)
+    WAIST = st.number_input("Waist Circumference (cm)", min_value=0.0, max_value=150.0, step=1.0)
+    HIP = st.number_input("Hip Circumference (cm)", min_value=0.0, max_value=150.0, step=1.0)
 
     # Calculate waist-to-hip ratio
     WHR = calculate_whr(WAIST, HIP)
