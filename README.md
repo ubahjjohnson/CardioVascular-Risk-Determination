@@ -23,14 +23,6 @@ The primary objective of this project is to develop a predictive model that can 
     * Identify complex relationships between variables.
 * Further details on data preprocessing, feature selection, model training, and evaluation will be provided in subsequent sections.
 
-## Key Findings (To be added)
-
-\* Important insights and findings from the data analysis.
-\* Performance metrics of the decision tree classifier are found in the file attached to this repo.
-
-## Contributions
-
-\* Johnson Ubah
 
 ## Future Directions (To be added)
 
