@@ -24,7 +24,7 @@ The primary objective of this project is to develop a predictive model that can 
 * Further details on data preprocessing, feature selection, model training, and evaluation will be provided in subsequent sections.
 
 
-## Future Directions (To be added)
+## Future Directions
 
 \* Potential areas for further research and improvement.
 \* Ideas for expanding the project, such as:
@@ -32,7 +32,7 @@ The primary objective of this project is to develop a predictive model that can 
     * Incorporating additional data sources.
     * Developing a user-friendly application for risk assessment.
 
-## Acknowledgments (To be added)
+## Acknowledgments
 
 \* University of Nigeria, Nsukka, for providing access to the gym member data.
 \* Dr. Tapamo Hippolyte of the University of Yaounde 1, my supervisor.
