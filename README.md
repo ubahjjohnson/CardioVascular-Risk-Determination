@@ -26,8 +26,6 @@ The primary objective of this project is to develop a predictive model that can 
 
 ## Future Directions
 
-\* Potential areas for further research and improvement.
-\* Ideas for expanding the project, such as:
     * Exploring other machine learning models.
     * Incorporating additional data sources.
     * Developing a user-friendly application for risk assessment.
