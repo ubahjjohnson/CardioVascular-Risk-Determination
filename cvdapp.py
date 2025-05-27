@@ -4,7 +4,7 @@ import numpy as np
 
 # Try to load the model
 try:
-    model = joblib.load('cvd_classifier.joblib')
+    model = joblib.load('cvd_classifier.pkl')
 except Exception as e:
     model = None
     st.error(f"Failed to load model: {e}")
